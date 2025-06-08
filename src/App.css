@@ -907,7 +907,7 @@ h1, h2, h3, h4, h5, h6 {
 .products-card-grid {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(2, minmax(0, 1fr)); /* Force 2 columns */
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
   padding: 0.5rem;
 }
@@ -926,8 +926,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .products-card-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Force 2 columns */
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 0.5rem;
     padding: 0.5rem;
     width: 100%;
@@ -935,12 +935,12 @@ h1, h2, h3, h4, h5, h6 {
 
   .product-card {
     width: 100%;
-    min-width: 0; /* Prevent overflow */
+    min-width: 0;
     padding: 0.75rem;
     gap: 0.5rem;
   }
 
-  /* Rest of mobile styles remain the same */
+  /* Rest of mobile styles */
   .product-card-header {
     display: flex;
     flex-direction: column;
@@ -993,6 +993,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0.5rem;
     padding-top: 0.5rem;
     gap: 0.35rem;
+    display: flex;
+    flex-direction: row;
   }
 
   .product-actions .btn {
@@ -1015,7 +1017,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Tablet and smaller desktop screens (768px to 1024px) */
 @media (min-width: 768px) {
   .products-card-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Force 3 columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 1rem;
   }
@@ -1024,7 +1026,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Desktop screens (1024px and above) */
 @media (min-width: 1024px) {
   .products-card-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr)); /* Force 4 columns */
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.25rem;
     padding: 1.25rem;
   }
