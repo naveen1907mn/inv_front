@@ -16,7 +16,7 @@ function Navbar({ isMenuOpen, toggleMenu, closeMenu }) {
   useEffect(() => {
     const fetchLowStockCount = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/products');
+        const response = await fetch('https://inv-back-dbul.onrender.com/products');
         const products = await response.json();
         const lowStock = products.filter(p => p.quantity <= p.min_stock_level && p.quantity > 0).length;
         setLowStockCount(lowStock);
